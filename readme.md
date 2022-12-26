@@ -4,4 +4,4 @@ This demo app has a simple user profile app using node js and mongodb.
 
 
 ### Credits
-Inspired from `[FreeCodeCamp MicroService Architecture](https://www.youtube.com/watch?v=hmkF77F9TLw)` course.
+Inspired from [FreeCodeCamp MicroService Architecture](https://www.youtube.com/watch?v=hmkF77F9TLw) course.
