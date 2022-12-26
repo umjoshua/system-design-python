@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth
+spec:
+  selector:
+    matchLabels:
+      app: auth
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 3
+  template:
+    metadata:
+      labels:
+        app: auth
+    spec:
+      containers:
+      - name: auth
+        image: umjoshua/auth:latest
+        ports:
+        - containerPort: 5000
+        envFrom:
+          - configMapRef:
+              name: auth-configmap
+          - secretRef:
+              name: auth-secret
+      - name: mysql
+        image: mysql
+        ports:
+          - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: root@123
