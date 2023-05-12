@@ -3,7 +3,7 @@ from email.message import EmailMessage
 import json
 import os
 
-def email(message):
+def send(message):
     message = json.loads(message)
     audio_fid = message["audio_fid"]
 
