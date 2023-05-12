@@ -16,7 +16,7 @@ def email(message):
     reciever_address = message["username"]
 
     msg['Subject'] = "Audio file download"
-    msg['From'] = "joshuatest58@gmail.com"
+    msg['From'] = sender_address
     msg['To'] = message["username"]
 
     s = smtplib.SMTP('smtp.gmail.com')
