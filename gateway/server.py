@@ -16,7 +16,7 @@ mongo_audio = PyMongo(server, uri="mongodb://mongodb-svc/audios")
 fs_videos = gridfs.GridFS(mongo_video.db)
 fs_audios = gridfs.GridFS(mongo_audio.db)
 
-connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
+connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq-svc"))
 channel = connection.channel()
 
 @server.route("/login", methods=["POST"])
