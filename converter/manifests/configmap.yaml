@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: converter-configmap
+data:
+  AUDIO_QUEUE: "audio"
+  VIDEO_QUEUE: "video"
